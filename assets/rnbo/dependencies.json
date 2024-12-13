@@ -1,114 +1,114 @@
 [
   {
     "id": "CC",
-    "file": "..\\..\\GSharpMajorOrgan.wav"
+    "file": "GSharpMajorOrgan.wav"
   },
   {
     "id": "BB",
-    "file": "..\\..\\FMinorOrgan.wav"
+    "file": "FMinorOrgan.wav"
   },
   {
     "id": "AA",
-    "file": "..\\..\\CSharpMajorOrgan.wav"
+    "file": "CSharpMajorOrgan.wav"
   },
   {
     "id": "BBB",
-    "file": "..\\..\\GuitarLow.wav"
+    "file": "GuitarLow.wav"
   },
   {
     "id": "AAA",
-    "file": "..\\..\\GuitarHigh.wav"
+    "file": "GuitarHigh.wav"
   },
   {
     "id": "DD",
-    "file": "..\\..\\CSharpMajorSeventhOrgan.wav"
+    "file": "CSharpMajorSeventhOrgan.wav"
   },
   {
     "id": "EE",
-    "file": "..\\..\\FMinorNinthOrgan.wav"
+    "file": "FMinorNinthOrgan.wav"
   },
   {
     "id": "FF",
-    "file": "..\\..\\GSharpMajorSeventhOrgan.wav"
+    "file": "GSharpMajorSeventhOrgan.wav"
   },
   {
     "id": "J",
-    "file": "..\\..\\DSharpLong.wav"
+    "file": "DSharpLong.wav"
   },
   {
     "id": "I",
-    "file": "..\\..\\DSharpOctaveUpLong.wav"
+    "file": "DSharpOctaveUpLong.wav"
   },
   {
     "id": "H",
-    "file": "..\\..\\DSharpOctaveUpShort.wav"
+    "file": "DSharpOctaveUpShort.wav"
   },
   {
     "id": "G",
-    "file": "..\\..\\DSharpShort.wav"
+    "file": "DSharpShort.wav"
   },
   {
     "id": "F",
-    "file": "..\\..\\GOctaveDownLong.wav"
+    "file": "GOctaveDownLong.wav"
   },
   {
     "id": "E",
-    "file": "..\\..\\GOctaveDownShort.wav"
+    "file": "GOctaveDownShort.wav"
   },
   {
     "id": "D",
-    "file": "..\\..\\GOctaveHighLong.wav"
+    "file": "GOctaveHighLong.wav"
   },
   {
     "id": "C",
-    "file": "..\\..\\GOctaveHighShort.wav"
+    "file": "GOctaveHighShort.wav"
   },
   {
     "id": "B",
-    "file": "..\\..\\GSharpLong.wav"
+    "file": "GSharpLong.wav"
   },
   {
     "id": "A",
-    "file": "..\\..\\GSharpShort.wav"
+    "file": "GSharpShort.wav"
   },
   {
     "id": "K",
-    "file": "..\\..\\CShort.wav"
+    "file": "CShort.wav"
   },
   {
     "id": "T",
-    "file": "..\\..\\CSharpOctaveUpLong.wav"
+    "file": "CSharpOctaveUpLong.wav"
   },
   {
     "id": "S",
-    "file": "..\\..\\CSharpOctaveUpShort.wav"
+    "file": "CSharpOctaveUpShort.wav"
   },
   {
     "id": "R",
-    "file": "..\\..\\FOctaveDownLong.wav"
+    "file": "FOctaveDownLong.wav"
   },
   {
     "id": "Q",
-    "file": "..\\..\\FOctaveDownShort.wav"
+    "file": "FOctaveDownShort.wav"
   },
   {
     "id": "P",
-    "file": "..\\..\\GSharpOctaveHighLong.wav"
+    "file": "GSharpOctaveHighLong.wav"
   },
   {
     "id": "O",
-    "file": "..\\..\\GSharpOctaveHighShort.wav"
+    "file": "GSharpOctaveHighShort.wav"
   },
   {
     "id": "N",
-    "file": "..\\..\\CLong.wav"
+    "file": "CLong.wav"
   },
   {
     "id": "M",
-    "file": "..\\..\\COctaveUpLong.wav"
+    "file": "COctaveUpLong.wav"
   },
   {
     "id": "L",
-    "file": "..\\..\\COctaveUpShort.wav"
+    "file": "COctaveUpShort.wav"
   }
 ]
