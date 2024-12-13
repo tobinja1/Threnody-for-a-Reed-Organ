@@ -8,6 +8,10 @@ var context = new WAContext();
 runToggle = document.getElementById("run");
 volSlider = document.getElementById("vol");
 
+controlsContainer = document.getElementById("controls-container");
+clickToContinueContainer = document.getElementById("click-to-continue-container");
+
+
 const setup = async () => {
     // get exported RNBO patcher file (file name must match whatever is used during target export)
     let rawPatcher = await fetch("assets/rnbo/threnodyVer3.json");
@@ -60,6 +64,13 @@ const setup = async () => {
         device.parametersById.get("vol").value = volSlider.value/100;
         console.log(device.parametersById.get("vol").value);
     });
+
+    clickToContinueContainer.addEventListener('click', function(){
+        clickToContinueContainer.style.opacity = "0";
+        setTimeout(() => {
+            clickToContinueContainer.style.display = "none";
+          }, "500")
+    })
 
     // device.parametersById.get("testTone").value = 1;
 
