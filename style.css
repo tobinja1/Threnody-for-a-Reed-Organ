@@ -1,5 +1,5 @@
 * {
-    font-family: sans-serif;
+    font-family: Garamond, serif;
     color: white;
 }
 
@@ -8,9 +8,44 @@ body {
 }
 
 h1 {
+    color: rgb(251, 235, 144);
     text-align: center;
     z-index: 998;
+    font-size: 3rem;
 }
+
+p, label {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+/* .controls-sub-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+.controls-sub-container .checkmark {
+    height: 25px;
+    width: 25px;
+    color: white;
+} */
+
+/* .controls-sub-container .checkmark::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  } */
+
+  .subhed {
+    z-index: 997;
+  }
 
 .main-container {
     display: flex;
@@ -35,4 +70,12 @@ h1 {
     position: absolute;
     height: 50%;
     background-color: black;
+}
+
+.controls-sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

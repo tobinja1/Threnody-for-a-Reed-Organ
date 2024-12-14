@@ -11,14 +11,19 @@
 <body>
     <div class="main-container">
         <h1>Threnody for a Reed Organ</h1>
+        <h2 class="subhed" style="margin-top: -0.75rem;">by Jay Tobin</h3>
         <div id="controls-container">
             <div id="click-to-continue-container">
                 <p>click anywhere to continue</p>
             </div>
-            <p>Run:</p>
-            <input type="checkbox" id="run" name="run" value="0">
-            <p>Volume:</p>
-            <input type="range" min="0" max="100" value="75" class="slider" id="vol">
+            <div class="controls-sub-container">
+                <label for=run style="margin-right: 2px;">Run:</label>
+                <input type="checkbox" id="run" name="run" value="0" style="margin-top: 4px;" class="checkmark">
+            </div>
+            <div class="controls-sub-container">
+                <label for=vol style="margin-right: 4px;">Volume:</label>
+                <input type="range" min="0" max="100" value="75" class="slider" id="vol" style="margin-top: 4px;">
+            </div>  
         </div>
     </div>
 </body>
