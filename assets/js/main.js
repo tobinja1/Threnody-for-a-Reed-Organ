@@ -14,7 +14,7 @@ clickToContinueContainer = document.getElementById("click-to-continue-container"
 
 const setup = async () => {
     // get exported RNBO patcher file (file name must match whatever is used during target export)
-    let rawPatcher = await fetch("assets/rnbo/threnodyVer3.json");
+    let rawPatcher = await fetch("assets/rnbo/threnodyVer4.json");
     const patcher = await rawPatcher.json();
   
     // fetch dependencies (if applicable, dependencies.json is created during target export)
@@ -72,10 +72,11 @@ const setup = async () => {
           }, "500")
     })
 
-    // device.parametersById.get("testTone").value = 1;
+    //device.parametersById.get("testTone").value = 1;
+    //device.parametersById.get("vol").value = 1;
+
 
     context.resume();
-
   };
   
   setup();
