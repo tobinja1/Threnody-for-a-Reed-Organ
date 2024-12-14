@@ -65,7 +65,7 @@ const setup = async () => {
         console.log(device.parametersById.get("vol").value);
     });
 
-    clickToContinueContainer.addEventListener('click', function(){
+    document.addEventListener('click', function(){
         clickToContinueContainer.style.opacity = "0";
         setTimeout(() => {
             clickToContinueContainer.style.display = "none";
@@ -75,8 +75,12 @@ const setup = async () => {
     //device.parametersById.get("testTone").value = 1;
     //device.parametersById.get("vol").value = 1;
 
-
-    context.resume();
   };
+
+  runToggle.addEventListener('click', function(){
+    if(context.state === "suspended"){
+        context.resume();
+    }
+});
   
   setup();
