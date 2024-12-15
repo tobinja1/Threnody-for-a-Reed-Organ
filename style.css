@@ -57,9 +57,11 @@ p, label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     height: 90vh;
     transition: all 0.5s ease-in-out;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
  #controls-container, #click-to-continue-container, #explanation-text-lite {
