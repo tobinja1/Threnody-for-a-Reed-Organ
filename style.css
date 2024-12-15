@@ -11,11 +11,16 @@ h1 {
     color: rgb(251, 235, 144);
     text-align: center;
     z-index: 998;
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: lightgrey;
 }
 
 p, label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bolder;
 }
 
@@ -54,9 +59,10 @@ p, label {
     align-items: center;
     width: 100%;
     height: 90vh;
+    transition: all 0.5s ease-in-out;
 }
 
- #controls-container, #click-to-continue-container {
+ #controls-container, #click-to-continue-container, #explanation-text-lite {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +70,7 @@ p, label {
     width: 100%;
     transition: all 0.5s ease-in-out;
     z-index: 1;
+    opacity: 0;
 }
 
 #click-to-continue-container {
@@ -78,4 +85,8 @@ p, label {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+#explanation-text-lite {
+    color: lightgray;
 }
