@@ -9,7 +9,7 @@ runToggle = document.getElementById("run");
 volSlider = document.getElementById("vol");
 
 controlsContainer = document.getElementById("controls-container");
-//clickToContinueContainer = document.getElementById("click-to-continue-container");
+clickToContinueContainer = document.getElementById("click-to-continue-container");
 explanationtextLite = document.getElementById("explanation-text-lite");
 
 mainContainer = document.querySelector(".main-container");
@@ -29,6 +29,9 @@ var toggledTimes = 0;
     }
 
 function fadeIns(){
+    setTimeout(() => {
+        clickToContinueContainer.style.opacity = "1";
+      }, "250");
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
@@ -90,6 +93,13 @@ const setup = async () => {
     });
 
     document.addEventListener('click', function(){
+        clickToContinueContainer.style.opacity = "0";
+        setTimeout(() => {
+            clickToContinueContainer.style.display = "none";
+          }, "500")
+    })
+
+    clickToContinueContainer.addEventListener('click', function(){
         clickToContinueContainer.style.opacity = "0";
         setTimeout(() => {
             clickToContinueContainer.style.display = "none";
