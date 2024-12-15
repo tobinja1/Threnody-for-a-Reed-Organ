@@ -11,6 +11,7 @@ volSlider = document.getElementById("vol");
 controlsContainer = document.getElementById("controls-container");
 clickToContinueContainer = document.getElementById("click-to-continue-container");
 explanationtextLite = document.getElementById("explanation-text-lite");
+loadingText = document.getElementById("loading-text");
 
 mainContainer = document.querySelector(".main-container");
 
@@ -35,6 +36,9 @@ function fadeIns(){
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
+      setTimeout(() => {
+        loadingText.style.opacity = "1";
+      }, "2000");
 }
   
 fadeIns();
