@@ -16,6 +16,9 @@ loadingText = document.getElementById("loading-text");
 
 mainContainer = document.querySelector(".main-container");
 
+whatIsThisButton = document.getElementById("what-is-this-button");
+whatIsThisBool = false;
+
 var toggledTimes = 0;
 
     // Decide on some parameters
@@ -37,9 +40,9 @@ function fadeIns(){
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
-      setTimeout(() => {
-        loadingText.style.opacity = "1";
-      }, "2000");
+    //   setTimeout(() => {
+    //     loadingText.style.opacity = "1";
+    //   }, "2000");
 }
   
 fadeIns();
@@ -121,9 +124,17 @@ const setup = async () => {
         context.resume();
     }
     toggledTimes++;
-    if(toggledTimes > 0){
-        explanationtextLite.style.opacity = "1";
-    }
+    // if(toggledTimes > 0){
+    //     explanationtextLite.style.opacity = "1";
+    // }
 });
+
+whatIsThisButton.addEventListener('click', function(){
+    whatIsThisBool = !whatIsThisBool;
+    console.log(whatIsThisBool);
+    if(whatIsThisBool == true) {
+        mainContainer.style.opacity = "0";
+    }
+})
   
   setup();

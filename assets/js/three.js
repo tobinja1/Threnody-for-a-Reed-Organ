@@ -20,7 +20,7 @@ scene.add( cube );
 controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 2;
+    controls.autoRotateSpeed = 0.3;
     controls.minDistance = 2.5;
     controls.maxDistance = 5;
     controls.zoomSpeed = 3;

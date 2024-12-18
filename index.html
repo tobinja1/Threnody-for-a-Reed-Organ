@@ -26,22 +26,25 @@
         <div class="progress-bar-container chord-two">
             <div class="progress-bar chord-five"></div>
         </div>
-        <h1 id="title">Threnody for a Reed Organ</h1>
-        <h2 id="subtitle" class="subhed" style="margin-top: -1.75rem;">an endless, iterative generative composition by Jay Tobin</h2>
+        <div class="title-and-hed-container">
+            <h1 id="title">Threnody for a Reed Organ</h1>
+            <h2 id="subtitle" class="subhed" style="margin-top: -2.25rem;">an endless generative composition by Jay Tobin</h2>
+        </div>
         <div id="controls-container">
-            <div id="click-to-continue-container">
-                <h2 style="font-size: 1.4rem;">click anywhere to continue</h2>
-                <p id="loading-text" style="color: lightgray;">If you're on mobile, this might need to load and be unresponsive for a few seconds.</p>
+            <div id="click-to-continue-container" class="main-color">
+                <h2>click anywhere to continue</h2>
             </div>
-            <div class="controls-sub-container">
-                <label for=run style="margin-right: 2px;">Run:</label>
-                <input type="checkbox" id="run" name="run" value="0" style="margin-top: 4px;" class="checkmark">
+            <div class="controls-sub-container-container">
+                <div class="controls-sub-container">
+                    <label for=run style="margin-right: 2px;">Run:</label>
+                    <input type="checkbox" id="run" name="run" value="0" style="margin-top: 4px;" class="checkmark">
+                </div>
+                <div class="controls-sub-container">
+                    <label for=vol style="margin-right: 4px;">Volume:</label>
+                    <input type="range" min="0" max="100" value="75" class="slider" id="vol" style="margin-top: 4px;">
+                </div>
             </div>
-            <div class="controls-sub-container">
-                <label for=vol style="margin-right: 4px;">Volume:</label>
-                <input type="range" min="0" max="100" value="75" class="slider" id="vol" style="margin-top: 4px;">
-            </div>
-            <p id="explanation-text-lite">This piece isn't interactive; it plays out endlessly without ever repeating itself. Sit, listen, and leave it on while you do other things.</p> 
+            <p id="what-is-this-button" style="text-decoration: underline;">what is this?</p>
         </div>
     </div>
 </body>
