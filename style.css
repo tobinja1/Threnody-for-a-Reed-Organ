@@ -1,23 +1,25 @@
 * {
-    font-family: Garamond, serif;
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: 400;
     color: white;
 }
 
 body {
-    background-color: black;
+    background-color: #39414B;
+    overflow-y: hidden;
 }
 
 h1 {
     color: rgb(251, 235, 144);
+    font-family: "IM Fell DW Pica SC", serif;
     text-align: center;
     z-index: 998;
-    font-size: 2.5rem;
+    font-size: 4rem;
     width: 80%;
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: lightgrey;
+    font-size: 1.2rem;
     text-align: center;
     width: 80%;
 }
@@ -55,13 +57,54 @@ p, label {
     z-index: 997;
   }
 
+.progress-bar-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10px;
+}
+
+.progress-bar {
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.chord-one {
+    background-color: #160095;
+}
+
+.chord-two {
+    background-color: #0036AB;
+}
+
+.chord-three {
+    background-color: #5847BB;
+}
+
+.chord-four {
+    background-color: #7B70BA;
+}
+
+.chord-five {
+    background-color: #B2A7F2;
+}
+
+.chord-six {
+    background-color: #CAC2F3;
+}
+
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 30%;
+    margin-top: 35%;
     transition: all 0.5s ease-in-out;
 }
 
@@ -78,7 +121,9 @@ p, label {
 
 #click-to-continue-container {
     position: absolute;
-    height: 50%;
+    height: 30%;
+    justify-content: top;
+    align-items: top;
     background-color: black;
 }
 
@@ -86,10 +131,19 @@ p, label {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #explanation-text-lite {
     color: lightgray;
+}
+
+#three-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
 }

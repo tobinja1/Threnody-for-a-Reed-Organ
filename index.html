@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+        </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threnody for a Reed Organ</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?&family=Kumbh+Sans:wght@100..900&family=Rubik+Iso&&family=IM+Fell+DW+Pica+SC&family=Bellefair&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- <div id="three-container"></div> -->
     <div class="main-container">
+        <!-- <script type="module" src="/assets/js/three.js"></script> -->
+        <div class="progress-bar-container chord-two">
+            <div class="progress-bar chord-five"></div>
+        </div>
         <h1 id="title">Threnody for a Reed Organ</h1>
-        <h2 id="subtitle" class="subhed" style="margin-top: -0.75rem;">by Jay Tobin</h3>
+        <h2 id="subtitle" class="subhed" style="margin-top: -1.75rem;">an endless, iterative generative composition by Jay Tobin</h2>
         <div id="controls-container">
             <div id="click-to-continue-container">
                 <h2 style="font-size: 1.4rem;">click anywhere to continue</h2>
