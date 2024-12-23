@@ -136,6 +136,7 @@ whatIsThisButton.addEventListener('click', function(){
         document.querySelector("body").style.overflowY = "scroll";
         mainContainer.style.opacity = "0";
         infoContainer.style.opacity = "1";
+        infoContainer.style.display = "flex";
 
 });
 
@@ -145,6 +146,7 @@ document.getElementById("return-button").addEventListener('click', function(){
     document.querySelector("body").style.overflowY = "hidden";
         mainContainer.style.opacity = "1";
         infoContainer.style.opacity = "0";
+        infoContainer.style.display = "none";
 
 })
   
