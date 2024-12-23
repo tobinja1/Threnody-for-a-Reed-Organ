@@ -15,6 +15,7 @@ explanationtextLite = document.getElementById("explanation-text-lite");
 loadingText = document.getElementById("loading-text");
 
 mainContainer = document.querySelector(".main-container");
+infoContainer = document.querySelector(".info-container")
 
 whatIsThisButton = document.getElementById("what-is-this-button");
 whatIsThisBool = false;
@@ -130,11 +131,21 @@ const setup = async () => {
 });
 
 whatIsThisButton.addEventListener('click', function(){
-    whatIsThisBool = !whatIsThisBool;
+    // whatIsThisBool = !whatIsThisBool;
     console.log(whatIsThisBool);
-    if(whatIsThisBool == true) {
+        document.querySelector("body").style.overflowY = "scroll";
         mainContainer.style.opacity = "0";
-    }
+        infoContainer.style.opacity = "1";
+
+});
+
+document.getElementById("return-button").addEventListener('click', function(){
+    // whatIsThisBool = !whatIsThisBool;
+    console.log(whatIsThisBool);
+    document.querySelector("body").style.overflowY = "hidden";
+        mainContainer.style.opacity = "1";
+        infoContainer.style.opacity = "0";
+
 })
   
   setup();
