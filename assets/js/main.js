@@ -1,4 +1,5 @@
 // Get createDevice from the rnbo.js library
+
 const { createDevice } = RNBO;
 
 // Create AudioContext
@@ -14,6 +15,10 @@ explanationtextLite = document.getElementById("explanation-text-lite");
 loadingText = document.getElementById("loading-text");
 
 mainContainer = document.querySelector(".main-container");
+infoContainer = document.querySelector(".info-container")
+
+whatIsThisButton = document.getElementById("what-is-this-button");
+whatIsThisBool = false;
 
 var toggledTimes = 0;
 
@@ -36,9 +41,9 @@ function fadeIns(){
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
-      setTimeout(() => {
-        loadingText.style.opacity = "1";
-      }, "2000");
+    //   setTimeout(() => {
+    //     loadingText.style.opacity = "1";
+    //   }, "2000");
 }
   
 fadeIns();
@@ -120,9 +125,27 @@ const setup = async () => {
         context.resume();
     }
     toggledTimes++;
-    if(toggledTimes > 0){
-        explanationtextLite.style.opacity = "1";
-    }
+    // if(toggledTimes > 0){
+    //     explanationtextLite.style.opacity = "1";
+    // }
 });
+
+whatIsThisButton.addEventListener('click', function(){
+    // whatIsThisBool = !whatIsThisBool;
+    console.log(whatIsThisBool);
+        document.querySelector("body").style.overflowY = "scroll";
+        mainContainer.style.opacity = "0";
+        infoContainer.style.opacity = "1";
+
+});
+
+document.getElementById("return-button").addEventListener('click', function(){
+    // whatIsThisBool = !whatIsThisBool;
+    console.log(whatIsThisBool);
+    document.querySelector("body").style.overflowY = "hidden";
+        mainContainer.style.opacity = "1";
+        infoContainer.style.opacity = "0";
+
+})
   
   setup();
