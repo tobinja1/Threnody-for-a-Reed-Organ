@@ -6,8 +6,12 @@ const { createDevice } = RNBO;
 var WAContext = window.AudioContext || window.webkitAudioContext;
 var context = new WAContext();
 
-runToggle = document.getElementById("run");
+bgColor = "LightGreen";
+
 volSlider = document.getElementById("vol");
+
+runButton = document.getElementById("run-button");
+runBool = false;
 
 controlsContainer = document.getElementById("controls-container");
 clickToContinueContainer = document.getElementById("click-to-continue-container");
@@ -35,9 +39,9 @@ var toggledTimes = 0;
     }
 
 function fadeIns(){
-    setTimeout(() => {
-        clickToContinueContainer.style.opacity = "1";
-      }, "250");
+    // setTimeout(() => {
+    //     clickToContinueContainer.style.opacity = "1";
+    //   }, "250");
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
@@ -91,36 +95,48 @@ const setup = async () => {
     // connect device to AudioContext audio output
     device.node.connect(context.destination);
 
-    runToggle.addEventListener('click', function(){
-        device.parametersById.get("run").value = runToggle.checked ? 1 : 0;
-        console.log(device.parametersById.get("run").value);
-    });
-    
     volSlider.addEventListener('input', function(){
         device.parametersById.get("vol").value = volSlider.value/100;
         console.log(device.parametersById.get("vol").value);
     });
 
-    document.addEventListener('click', function(){
-        clickToContinueContainer.style.opacity = "0";
-        setTimeout(() => {
-            clickToContinueContainer.style.display = "none";
-          }, "500")
-    })
+    // document.addEventListener('click', function(){
+    //     clickToContinueContainer.style.opacity = "0";
+    //     setTimeout(() => {
+    //         clickToContinueContainer.style.display = "none";
+    //       }, "500")
+    // })
 
-    clickToContinueContainer.addEventListener('click', function(){
-        clickToContinueContainer.style.opacity = "0";
-        setTimeout(() => {
-            clickToContinueContainer.style.display = "none";
-          }, "500")
-    })
+    // clickToContinueContainer.addEventListener('click', function(){
+    //     clickToContinueContainer.style.opacity = "0";
+    //     setTimeout(() => {
+    //         clickToContinueContainer.style.display = "none";
+    //       }, "500")
+    // })
+
+    runButton.addEventListener('click', function(){
+        runBool = !runBool;
+        console.log("click");
+        if(runBool == true) {
+            device.parametersById.get("run").value = 1;
+            runButton.style.backgroundColor = "white"
+            runButton.style.color = bgColor;
+        }
+        else {
+            device.parametersById.get("run").value = 0;
+            runButton.style.backgroundColor = bgColor;
+            runButton.style.color = "white";
+        }
+        })
 
     //device.parametersById.get("testTone").value = 1;
     //device.parametersById.get("vol").value = 1;
 
+
+
   };
 
-  runToggle.addEventListener('click', function(){
+runButton.addEventListener('click', function(){
     if(context.state === "suspended"){
         context.resume();
     }

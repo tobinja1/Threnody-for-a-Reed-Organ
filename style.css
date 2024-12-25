@@ -35,6 +35,69 @@ p, label {
     font-size: 1rem;
 }
 
+button {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+
+input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Track: webkit browsers */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: var(--bg-color);
+    border-radius: 10px;
+  }
+  
+  /* Track: Mozilla Firefox */
+  input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: var(--bg-color);
+    border-radius: 10px;
+  }
+  
+  /* Thumb: webkit */
+  input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px white;
+  }
+  
+  
+  /* Thumb: Firefox */
+  input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    /*  slider progress trick  */
+    box-shadow: -407px 0 0 400px white;
+  }
+
+
 /* .controls-sub-container input {
     position: absolute;
     opacity: 0;
@@ -220,5 +283,15 @@ p, label {
   
     to {
       scale: 1.05;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    h2 {
+        font-size: 1rem;
     }
   }
