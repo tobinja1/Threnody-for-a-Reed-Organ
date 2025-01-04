@@ -6,7 +6,7 @@ const { createDevice } = RNBO;
 var WAContext = window.AudioContext || window.webkitAudioContext;
 var context = new WAContext();
 
-bgColor = "LightGreen";
+bgColor = "darkslateblue";
 
 volSlider = document.getElementById("vol");
 
@@ -148,21 +148,22 @@ runButton.addEventListener('click', function(){
 
 whatIsThisButton.addEventListener('click', function(){
     // whatIsThisBool = !whatIsThisBool;
-    console.log(whatIsThisBool);
+        mainContainer.style.opacity = 0;
+        document.getElementById("three-container").style.opacity = 0.1;
         document.querySelector("body").style.overflowY = "scroll";
-        mainContainer.style.opacity = "0";
-        infoContainer.style.opacity = "1";
-        infoContainer.style.display = "flex";
-
+        infoContainer.style.transform = "translateY(0vh)";
 });
 
 document.getElementById("return-button").addEventListener('click', function(){
     // whatIsThisBool = !whatIsThisBool;
-    console.log(whatIsThisBool);
+    mainContainer.style.opacity = 1;
+    document.getElementById("three-container").style.opacity = 1;
     document.querySelector("body").style.overflowY = "hidden";
-        mainContainer.style.opacity = "1";
-        infoContainer.style.opacity = "0";
-        infoContainer.style.display = "none";
+    infoContainer.style.transform = "translateY(100vh)";
+    // setTimeout(() => {
+    //     infoContainer.style.display = "none";
+    //   }, 500);
+      
 
 })
   
