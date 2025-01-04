@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    color: rgb(251, 235, 144);
+    color: #fbeb90;
     font-family: "IM Fell DW Pica SC", serif;
     text-align: center;
     z-index: 998;
@@ -281,7 +281,7 @@ input[type="range"] {
 
   @media only screen and (max-width: 900px) {
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 3rem;
     }
     h2 {
