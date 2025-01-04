@@ -47,7 +47,8 @@ loader.load(
 // const cube = new THREE.Mesh( geometry, material );
 // scene.add( cube );
 
-const light = new THREE.AmbientLight( 0xFFFFFF ); // soft white light scene.add( light );
+const light = new THREE.AmbientLight( 0xFFFFFF );
+light.intensity = 3;
 scene.add(light);
 
 controls = new OrbitControls(camera, renderer.domElement);
