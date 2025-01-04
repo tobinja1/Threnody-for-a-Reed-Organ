@@ -1,3 +1,6 @@
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
 // Get createDevice from the rnbo.js library
 
 const { createDevice } = RNBO;
@@ -160,6 +163,8 @@ document.getElementById("return-button").addEventListener('click', function(){
     document.getElementById("three-container").style.opacity = 1;
     document.querySelector("body").style.overflowY = "hidden";
     infoContainer.style.transform = "translateY(100vh)";
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     // setTimeout(() => {
     //     infoContainer.style.display = "none";
     //   }, 500);
