@@ -59,6 +59,7 @@ controls = new OrbitControls(camera, renderer.domElement);
     controls.minDistance = 1;
     controls.maxDistance = 2;
     controls.zoomSpeed = 3;
+    controls.maxPolarAngle = 1.5;
 
 camera.position.z = 5;
 

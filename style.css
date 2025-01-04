@@ -35,6 +35,10 @@ p, label {
     font-size: 1rem;
 }
 
+image {
+    object-fit: cover;
+}
+
 button {
     font-size: 1.2rem;
     padding-left: 0.5rem;
@@ -47,7 +51,7 @@ button {
 }
 
 button:hover {
-    box-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 6px white;
 }
 
 
@@ -229,12 +233,11 @@ input[type="range"] {
 }
 
 #what-is-this-button {
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-name: bouncy;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
     animation-timing-function: ease-in-out;
-    cursor: pointer;
 }
 
 .info-container {
@@ -251,6 +254,18 @@ input[type="range"] {
 
 .info-text {
     width: 90%
+}
+
+.images-container {
+    width: 90%; 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 1rem;
+}
+
+.organ-image {
+    width: 49%;
+    border-radius: 5px;
 }
 
 
@@ -271,5 +286,15 @@ input[type="range"] {
     }
     h2 {
         font-size: 1rem;
+    }
+    .organ-image {
+        width: 100%;
+        margin-top: 2%;
+    }
+    .images-container {
+        width: 90%; 
+        display: flex; 
+        flex-direction: column;
+        margin-bottom: 1rem;
     }
   }
