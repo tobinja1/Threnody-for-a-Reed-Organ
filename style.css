@@ -268,8 +268,11 @@ input[type="range"] {
 }
 
 .organ-image {
-    width: 49%;
+    width: 90%;
+    height: 600px;
     border-radius: 5px;
+    object-fit: cover;
+    object-position: top;
 }
 
 
@@ -287,27 +290,17 @@ input[type="range"] {
     #title {
         display: none;
     }
+    #mobile-title {
+        display: inline;
+    }
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       margin-bottom: 3rem;
     }
     h2 {
         font-size: 1rem;
     }
     .organ-image {
-        width: 100%;
-        margin-top: 2%;
-    }
-    .images-container {
-        width: 90%; 
-        display: flex; 
-        flex-direction: column;
-        margin-bottom: 1rem;
-    }
-  }
-
-  @media only screen and (min-width: 900px) {
-    #mobile-title {
-        display: none;
+        height: 200px;
     }
   }
