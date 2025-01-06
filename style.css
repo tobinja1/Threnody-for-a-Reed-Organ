@@ -4,6 +4,12 @@
 
 * {
     font-family: "Libre Baskerville", sans-serif;
+    line-height: 135%;
+    /* font-family: "Domine", serif; */
+    /* font-family: "Outfit", serif; */
+    /* font-family: "Kumbh Sans", serif; */
+    /* font-family: "DM Serif Text", serif; */
+    /* font-family: "Raleway", serif; */
     font-weight: 400;
     color: white;
 }
@@ -19,6 +25,7 @@ body {
 h1 {
     color: #fbeb90;
     font-family: "IM Fell DW Pica SC", serif;
+    /* font-family: "DM Serif Text", serif; */
     text-align: center;
     z-index: 998;
     font-size: 4rem;
