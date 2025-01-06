@@ -42,15 +42,9 @@ var toggledTimes = 0;
     }
 
 function fadeIns(){
-    // setTimeout(() => {
-    //     clickToContinueContainer.style.opacity = "1";
-    //   }, "250");
     setTimeout(() => {
         controlsContainer.style.opacity = "1";
       }, "500");
-    //   setTimeout(() => {
-    //     loadingText.style.opacity = "1";
-    //   }, "2000");
 }
   
 fadeIns();
@@ -60,21 +54,8 @@ const setup = async () => {
     let rawPatcher = await fetch("assets/rnbo/threnodyVer4.json");
     const patcher = await rawPatcher.json();
   
-    // fetch dependencies (if applicable, dependencies.json is created during target export)
-    // const dependencies = [];
-    // try {
-    //     const dependenciesResponse = await fetch("assets/rnbo/dependencies.json");
-    //     dependencies = await dependenciesResponse.json();
-    //     dependencies = dependencies.map(d => d.file ? Object.assign({}, d, { file: "assets/rnbo/" + d.file }) : d);
-    //     console.log(dependenciesResponse.json());
-    // } catch (e) {}
-  
     // create RNBO device
     const device = await createDevice({ context, patcher });
-  
-    // load samples (if applicable, check "Copy Sample Dependencies" during target export)
-    // if (dependencies.length)
-    //     await device.loadDataBufferDependencies(dependencies);
 
     // Load the exported dependencies.json file
     let dependencies = await fetch("assets/rnbo/dependencies.json");
@@ -103,20 +84,6 @@ const setup = async () => {
         console.log(device.parametersById.get("vol").value);
     });
 
-    // document.addEventListener('click', function(){
-    //     clickToContinueContainer.style.opacity = "0";
-    //     setTimeout(() => {
-    //         clickToContinueContainer.style.display = "none";
-    //       }, "500")
-    // })
-
-    // clickToContinueContainer.addEventListener('click', function(){
-    //     clickToContinueContainer.style.opacity = "0";
-    //     setTimeout(() => {
-    //         clickToContinueContainer.style.display = "none";
-    //       }, "500")
-    // })
-
     runButton.addEventListener('click', function(){
         runBool = !runBool;
         console.log("click");
@@ -144,13 +111,9 @@ runButton.addEventListener('click', function(){
         context.resume();
     }
     toggledTimes++;
-    // if(toggledTimes > 0){
-    //     explanationtextLite.style.opacity = "1";
-    // }
 });
 
 whatIsThisButton.addEventListener('click', function(){
-    // whatIsThisBool = !whatIsThisBool;
         mainContainer.style.opacity = 0;
         document.getElementById("three-container").style.opacity = 0.1;
         document.querySelector("body").style.overflowY = "scroll";
@@ -158,18 +121,12 @@ whatIsThisButton.addEventListener('click', function(){
 });
 
 document.getElementById("return-button").addEventListener('click', function(){
-    // whatIsThisBool = !whatIsThisBool;
     mainContainer.style.opacity = 1;
     document.getElementById("three-container").style.opacity = 1;
     document.querySelector("body").style.overflowY = "hidden";
     infoContainer.style.transform = "translateY(100vh)";
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    // setTimeout(() => {
-    //     infoContainer.style.display = "none";
-    //   }, 500);
-      
-
 })
   
   setup();

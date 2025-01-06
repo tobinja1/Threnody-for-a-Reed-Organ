@@ -16,22 +16,7 @@ document.getElementById('three-container').appendChild(renderer.domElement);
 const loader = new GLTFLoader()
 loader.load(
   '/assets/3D/12_21_2024.glb',
-  function (gltf) {
-    // gltf.scene.traverse(function (child) {
-    //     if ((child as THREE.Mesh).isMesh) {
-    //         const m = (child as THREE.Mesh)
-    //         m.receiveShadow = true
-    //         m.castShadow = true
-    //     }
-    //     if (((child as THREE.Light)).isLight) {
-    //         const l = (child as THREE.SpotLight)
-    //         l.castShadow = true
-    //         l.shadow.bias = -.003
-    //         l.shadow.mapSize.width = 2048
-    //         l.shadow.mapSize.height = 2048
-    //     }
-    // })
-    
+  function (gltf) { 
     scene.add(gltf.scene)
   },
   (xhr) => {
@@ -41,11 +26,6 @@ loader.load(
     console.log(error)
   }
 )
-
-// const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-// const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-// const cube = new THREE.Mesh( geometry, material );
-// scene.add( cube );
 
 const light = new THREE.AmbientLight( 0xFFFFFF );
 light.intensity = 3;
@@ -63,8 +43,6 @@ controls = new OrbitControls(camera, renderer.domElement);
     controls.maxPolarAngle = 1.5;
 
 camera.position.z = 5;
-
-
 
 function animate() {
 
